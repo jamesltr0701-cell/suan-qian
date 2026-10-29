@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "film-example",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "department": "电影",
   "status": "example_requires_teacher_confirmation",
   "sources": [
@@ -31,6 +31,14 @@
         "settlement_reconciliation",
         "teaching_resume_signal"
       ]
+    },
+    "monthly_review": {
+      "window": "calendar_month",
+      "include_remaining_scheduled_lessons": true,
+      "show_taught_pending_feedback": true,
+      "carry_forward_unsettled_hours": true,
+      "forecast_balance": "confirmed_unsettled + taught_pending_feedback_unsettled + remaining_scheduled_unsettled",
+      "forecast_is_settlement_confirmation": false
     }
   },
   "output_categories": [

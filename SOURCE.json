@@ -1,24 +1,25 @@
 {
   "schema_version": 1,
-  "version": "1.1.1",
+  "version": "1.2.0",
   "source_project": "SKILL PLAYGROUND",
   "source_path": ".agents/skills/suan-qian",
-  "source_tag": "suan-qian-v1.1.1",
-  "source_commit": "b4ae7f13e154524392eec317cb75b7f87b7d36f0",
+  "source_tag": "suan-qian-v1.2.0",
+  "source_commit": "9468a3ae9b17f06bf639d6745f78715f15055f01",
   "sha256": {
     ".gitignore": "10a5d20288873260cd07176353191604ea3c100e26dfda48e6cfdead09b9be73",
-    "README.md": "fe4ea807570711d3a5d503943f2ae0065fd9a99b2be6e6309eeb50400ab62d0c",
-    "SKILL.md": "4b8b68189b5fb51f52a23c26e84f9663914771476a08c101cc660825fa247e80",
-    "VERSION": "cc52f678848b814373757b460383bf61960e4943c203735adde0a350b3e50989",
-    "adapters/department-template.json": "f8fe556273b4ff2b07314201882a6457f142129e07d2acc1d76f36303d6c5ae5",
-    "adapters/film-example.json": "d82df8ceef5482d12d6ddfdb428bf41efd46253f4e7e704da6b6277e255774a8",
+    "README.md": "2575f7a462fde0de4304ff2b804dbf8f5a1b9515f7160027a84250a9b899e7be",
+    "SKILL.md": "293f4309cdbdbfa0f04c52538c29689b9b24b79397e9dcc0acbc606d0d00ac9a",
+    "VERSION": "1e5b51cde515396a9fa762909cf8ca6584ccc564b325d2eebeea76175fe95c4d",
+    "adapters/department-template.json": "d8f67e42c9914a15bbbb28e9c29a61698ebdd686f2b53c674d6e16271b8d4a3b",
+    "adapters/film-example.json": "2269c2e80df4f9c1cf375bf9e9a80dda7c786b20e118c87c4e7420ee78ee4e82",
     "agents/openai.yaml": "3117744cce1d0383dc077bca36ba8a9d809a4163e443bb53a3e14a83e5c6ab93",
-    "references/adapters.md": "e9ce1e3f76bbdde5a5dda1f3037f6efef92df363e40733b93854fa0bb90e0d7d",
-    "references/crm-workflow.md": "5e35a989b69e9975be777926429d383596a658d652f63f8296f446903a6b1391",
-    "references/reporting.md": "bfa6d9c47a5db4736f8a2c76e78c68f15d23da423b462ed112e8ca98789bb7bc",
-    "references/roster.md": "29ad1399ba87c2a13cd348f0d4b6a6852dec92b572899b9e381487120a53d2ea",
+    "references/adapters.md": "ba34e2a5edb8f0d7948b93258269f30fc7b0bbe91c738bf849aa0d65866c1091",
+    "references/crm-workflow.md": "9bace5f317d41979d45f46beb3facd8ecba4a562894bf43b2cebab52e95227db",
+    "references/monthly-planning.md": "b53fe1996cef32cfb2875a0845fcdd9922ca5a452ddf5fd194d46bf492023fc6",
+    "references/reporting.md": "a17ac7774cf1c43d33ab4b1249fbf920528f94b1ce48153725c31e2d5738e80b",
+    "references/roster.md": "f8b63392cc7ac8554edbeb7bc32b66710eec2c031f4339225be7a64f63f5b6a2",
     "references/runtime-claude-code.md": "4eeee04d83ef0b212305647581c0c090e6376e198be61df0be72d15bf9ecdd41",
     "references/runtime-codex.md": "6a30c1585abc12d64313c44ecd1677c414be05737b25a17c8bb7bcc557f74c3f",
-    "references/settlement.md": "c78950e6b555b9baea4f97322c38a28bf799e2e20b6fe8a09fdb433a3337ff47"
+    "references/settlement.md": "b4610ef5bc802af40639d40c7f9f62337078ff0d402047ecfb607f9b28f4b30c"
   }
 }
