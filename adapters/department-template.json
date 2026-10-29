@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "department-template",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "department": null,
   "status": "template",
   "sources": [],
@@ -9,7 +9,24 @@
     "minimum_unsettled_hours": null,
     "crm_hour_to_lesson_factor": null,
     "count_when": null,
-    "exclude_settled": true
+    "exclude_settled": true,
+    "course_type_scope": {
+      "included_course_types": [
+        "作品集课",
+        "基础课"
+      ],
+      "other_course_types": "exclude",
+      "matching": "exact_after_trim",
+      "missing_course_type": "exclude_and_flag",
+      "applies_to": [
+        "monthly_hours",
+        "unsettled_hours",
+        "threshold_gap",
+        "report_grouping",
+        "settlement_reconciliation",
+        "teaching_resume_signal"
+      ]
+    }
   },
   "output_categories": [],
   "non_standalone_outputs": [],
