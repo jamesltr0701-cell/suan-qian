@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "id": "film-example",
+  "version": "2.0.0",
+  "department": "电影",
+  "status": "example_requires_teacher_confirmation",
+  "sources": [
+    {
+      "kind": "example",
+      "description": "仅示例结构和产出方向；实际合同方案及生效规则由使用老师在私有适配中提供。"
+    }
+  ],
+  "hour_rules": {
+    "minimum_unsettled_hours": "12",
+    "crm_hour_to_lesson_factor": "1",
+    "count_when": "teacher_feedback_present",
+    "exclude_settled": true
+  },
+  "output_categories": [
+    {
+      "id": "screenplay",
+      "name": "剧本",
+      "required_combination": [
+        "完整剧本"
+      ],
+      "feedback_keywords": [
+        "故事构思",
+        "故事大纲",
+        "剧本修改",
+        "持续写作"
+      ],
+      "suggestion": "看看剧本能否收成一版完整稿，按剧本项目考虑。"
+    },
+    {
+      "id": "preproduction",
+      "name": "分镜制作和前期拍摄筹备",
+      "required_combination": [
+        "分镜",
+        "适用规则要求的前期拍摄筹备材料"
+      ],
+      "feedback_keywords": [
+        "分镜",
+        "选角",
+        "道具妆造",
+        "美术方案",
+        "情绪版"
+      ],
+      "restriction": "不可把单一选角表或情绪版当成完整组合项目。",
+      "suggestion": "看看分镜和前期筹备材料能否整理成一个完整项目。"
+    },
+    {
+      "id": "short-film",
+      "name": "短片制作",
+      "feedback_keywords": [
+        "短片制作"
+      ],
+      "suggestion": "看看短片及制作材料能否按适用方案整理送审。"
+    },
+    {
+      "id": "shooting",
+      "name": "短片拍摄",
+      "feedback_keywords": [
+        "拍摄",
+        "拍摄辅导"
+      ],
+      "suggestion": "看看拍摄是否完成、素材和项目材料能否按短片拍摄整理。"
+    },
+    {
+      "id": "postproduction",
+      "name": "短片后期制作",
+      "feedback_keywords": [
+        "剪辑",
+        "粗剪",
+        "定剪",
+        "声音",
+        "调色",
+        "导出",
+        "特效"
+      ],
+      "restriction": "粗剪是阶段线索，不保证已经达到成品审核要求。",
+      "suggestion": "看起来在后期，可以看看粗剪或定剪什么时候能交，能否按后期制作整理。"
+    },
+    {
+      "id": "prompted-film",
+      "name": "命题短片制作",
+      "feedback_keywords": [
+        "命题短片"
+      ],
+      "restriction": "需对应明确命题与作品。",
+      "suggestion": "看看对应命题短片是否有可送审版本。"
+    },
+    {
+      "id": "documentary",
+      "name": "纪录片拍摄",
+      "feedback_keywords": [
+        "纪录片"
+      ],
+      "suggestion": "看看纪录片拍摄和素材能否按适用方案整理。"
+    },
+    {
+      "id": "prompted-writing",
+      "name": "其他命题写作要求／其他命题要求",
+      "feedback_keywords": [
+        "命题写作",
+        "命题要求"
+      ],
+      "restriction": "需明确命题及产出，不代表任意作品均可。",
+      "suggestion": "核对具体命题及产出，看看是否能整理送审。"
+    }
+  ],
+  "non_standalone_outputs": [
+    "基础课本身",
+    "仅一张情绪版或选角表",
+    "只有排版/PPT/文书辅导记录，尚未明确对应合规产出"
+  ],
+  "variants": [],
+  "mapping_note": "CRM项目编号不直接等于政策中的编号，实际方案来自老师私有规则。"
+}

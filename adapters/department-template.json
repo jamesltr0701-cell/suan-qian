@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "department-template",
+  "version": "1.0.0",
+  "department": null,
+  "status": "template",
+  "sources": [],
+  "hour_rules": {
+    "minimum_unsettled_hours": null,
+    "crm_hour_to_lesson_factor": null,
+    "count_when": null,
+    "exclude_settled": true
+  },
+  "output_categories": [],
+  "non_standalone_outputs": [],
+  "variants": [],
+  "mapping_note": "由老师的真实规则填写，未知值保持null；不得默认套用电影规则。"
+}

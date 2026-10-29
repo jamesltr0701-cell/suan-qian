@@ -1,0 +1,6 @@
+interface:
+  display_name: "算钱"
+  short_description: "老师的月度课时复盘：科系规则接入、人工排除停带学生、结算单最终核对"
+  default_prompt: "使用 $suan-qian 帮我算钱，按我的科系规则和已确认名单检查在授学生，给一份简短口语化复盘。"
+policy:
+  allow_implicit_invocation: true
