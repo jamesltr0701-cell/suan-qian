@@ -4,17 +4,17 @@
 
 ## 私有文件
 
-- 本地 `~/.codex/suan-qian/profiles.json`（或 CODEX_HOME 对应路径）：`schema_version`、`profiles` 数组；每项有 `profile_id`、`teacher_name`、可得的 `teacher_id`、`crm_origin`、`data_root`。它只帮助下一次找到数据。
+- 当前宿主适配指定的本地 `profiles.json`：`schema_version`、`profiles` 数组；每项有 `profile_id`、`teacher_name`、可得的 `teacher_id`、`crm_origin`、`data_root`。它只帮助下一次找到数据。
 - `<data_root>/teacher-profile.json`：上述身份、`timezone`、`adapter_path`、`confirmed_rules`、`data_root`。已有旧台账可沿用。
 - `roster-decisions.json`：人工决定的当前状态与历史事件。
 - `project-register.json`：项目进度与已确认事实；`snapshots/`、`reports/`、`run-progress.json` 沿用。
 - `settlements/`：原件、识别结果、匹配结果和历史；`reminders.json`：每月结算单提醒是否已给、是否已收到。
 
-首次新建索引或目录受环境权限限制时保留当前工作区数据、明确路径，不能声称跨会话记忆已生效。不能为共享技能创建包含老师隐私的远端同步。
+首次新建索引或目录受环境权限限制时，使用老师指定且获准的私有目录并明确保存位置；不能默认落入当前公开项目，不能声称尚未保存的跨会话记忆已生效。不能为共享技能创建包含老师隐私的远端同步。
 
 ## 决定结构
 
-每位学生用 `(profile_id, student_id)` 定位，包含 `student_name`、`teaching_status`（active / stopped）、`review_scope`（regular / settlement_only / excluded）、`reason`、`confirmed_at`、`confirmed_by`、`user_statement`、`pending_project_keys`、`history`。只保存简短必要的用户原话，不复制整个聊天。
+每位学生用 `(profile_id, student_id)` 定位，包含 `student_name`、`teaching_status`（active / paused / stopped）、`review_scope`（regular / paused_watch / settlement_only / excluded）、`reason`、`confirmed_at`、`confirmed_by`、`user_statement`、`pending_project_keys`、`history`。只保存简短必要的用户原话，不复制整个聊天。
 
 规则：
 
@@ -23,7 +23,8 @@
 | 不再带，且已经结清；以后不用查 | stopped + excluded；停止常规扫描，保存旧账 |
 | 不再带，但还有待结项目 | stopped + settlement_only；仅跟进这些项目 |
 | 只说不再带，未交代是否结清 | 停止常规扫描；已知待结继续跟进，结算状态未知则集中提示一次，不把余额清零 |
-| 暂时没上课／本月0课时 | 不改变名单 |
+| 老师明确说暂时停滞／暂停 | paused + paused_watch；保留余额，每次轻量检查当月课表及可见的新结算信号 |
+| 只是本月0课时，老师未明确暂停 | 不改变名单 |
 | 恢复检查／又开始带 | active + regular；记录恢复事件，重新核对现有课次 |
 
 老师明确要求完全排除时即使旧账有余额，也可将扫描范围设为 excluded，但保留余额和未解决提示；范围排除与财务结清是两个状态，不能伪造结清。
@@ -37,3 +38,7 @@
 常规范围、仅待结范围、明确排除和未查分别计数。首次或名单有新变化时，报告后可以说“有不再带且已结清的学生，告诉我名字，下次就不查了”；不强制老师逐个确认，不因未回复阻塞报告。
 
 只有可靠的修改时间/增量接口能覆盖补反馈和结算变化时才使用增量读取；否则重读范围内学生的相关列表。逐条课次采集无法定位到ID时保存来源页和完整字段；列表行号只是本次页面定位，不能作为跨月永久课程ID。
+
+## 暂停学生的恢复
+
+暂停不代表结清。每次运行看轻量课表、名单或可见后台变更：仅有未来排课就提示“可能恢复”，不计已上课；核实已发生且有有效老师反馈的新课，才恢复 active + regular 并记录依据。新结算只触发对应旧项目核对，不单凭结算恢复授课。轻量数据看不到变化时注明“未核实”，不要声称暂停者没有新活动。没有新信号时不逐个深挖旧反馈；老师主动说明恢复或结算时立即更新。

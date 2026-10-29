@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "version": "1.1.0",
+  "source_project": "SKILL PLAYGROUND",
+  "source_path": ".agents/skills/suan-qian",
+  "source_tag": "suan-qian-v1.1.0",
+  "source_commit": "a7bb7cca235b2816e24ec847b3c6136b8196a8c9",
+  "sha256": {
+    ".gitignore": "10a5d20288873260cd07176353191604ea3c100e26dfda48e6cfdead09b9be73",
+    "README.md": "30ab723bef8e183449d12576ef3e22393c5beab037ab01aeebe9ee14a9f55d7f",
+    "SKILL.md": "246f3d2daaaf6b79a875d258af3c5ec70addd8a5d48f99d4f51a21e74da55e09",
+    "VERSION": "1575e1af4a95f12f70b4ee6a6adce8160953d93ea17dc2611b90883ccc3ad3b8",
+    "adapters/department-template.json": "5f3c13c224d9823245c1dc0e97546147c1b62f59fe4b8663b6786e03169ee5dc",
+    "adapters/film-example.json": "53ecd7b30de9d51c58e1b9835ec440ba01887b6b45c2d219206b8ab0af6870b2",
+    "agents/openai.yaml": "3117744cce1d0383dc077bca36ba8a9d809a4163e443bb53a3e14a83e5c6ab93",
+    "references/adapters.md": "8e150ceb036a255cf6ee78eb47086e74986170465d55c38114ee33ec3dee898b",
+    "references/crm-workflow.md": "8639d547683e59cf528018f8ebe696fabf12a6dcfd4b823ec99bf408a6e56a23",
+    "references/reporting.md": "01fc24d1a0de098430353dd5f471384aaee8510bd09ceea673085f375e395921",
+    "references/roster.md": "29ad1399ba87c2a13cd348f0d4b6a6852dec92b572899b9e381487120a53d2ea",
+    "references/runtime-claude-code.md": "4eeee04d83ef0b212305647581c0c090e6376e198be61df0be72d15bf9ecdd41",
+    "references/runtime-codex.md": "6a30c1585abc12d64313c44ecd1677c414be05737b25a17c8bb7bcc557f74c3f",
+    "references/settlement.md": "3fd8e685008a5f670b8d136cadeb1422b65912f7282ba5f0a594581269c858dd"
+  }
+}
